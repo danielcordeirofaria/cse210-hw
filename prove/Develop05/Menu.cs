@@ -5,6 +5,8 @@ class Menu
         bool isValidChoice = false;
         while (!isValidChoice)
         {
+            Console.WriteLine("");
+            
             Goals.GettingPointsfile();
             Console.WriteLine("");
             Console.WriteLine("Menu Options");
@@ -21,10 +23,9 @@ class Menu
             {
                 case "1":
                     GoalMenu creatingNewGoalMenu = new GoalMenu();
-                    creatingNewGoalMenu.StartNewGoalMenu(); // Chamar o método para iniciar o menu de criação de novos objetivos
+                    creatingNewGoalMenu.StartNewGoalMenu();
                     break;
                 case "2":
-                    // Console.Clear();
                     if (Goals.goalsBeingCreated.Count ==  0){ 
                         Goals.PrintingSavedGoals();
                     }else{
