@@ -9,7 +9,7 @@ class Order
         this.customer = customer;
     }
 
-    public decimal TotalCost()
+    public decimal TotalPrice()
     {
         decimal totalCost = 0;
 
@@ -18,7 +18,14 @@ class Order
             totalCost += product.GetTotalPrice();
         }
 
-        totalCost += customer.LivesInUSA() ? 5 : 35;
+        if (customer.LivesInUSA())
+        {
+            totalCost += 5;
+        }
+        else
+        {
+            totalCost += 35;
+        }
 
         return totalCost;
     }

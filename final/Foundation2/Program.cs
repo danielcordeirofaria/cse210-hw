@@ -23,8 +23,8 @@ class Program
         List<Product> order2List = new List<Product>() { product4, product5 };
         Order order2 = new Order(order2List, joeBiden);
 
-        decimal totalCost1 = order1.TotalCost();
-        decimal totalCost2 = order2.TotalCost();
+        decimal totalPrice1 = order1.TotalPrice();
+        decimal totalPrice2 = order2.TotalPrice();
 
         string packingLabel1 = order1.PackingLabel();
         string packingLabel2 = order2.PackingLabel();
@@ -32,15 +32,20 @@ class Program
         string shippingLabel1 = order1.ShippingLabel();
         string shippingLabel2 = order2.ShippingLabel();
 
+
+        Console.WriteLine("----------------------------------------------------------------------------");
+
         Console.WriteLine("Order 1:");
         Console.WriteLine(packingLabel1);
         Console.WriteLine(shippingLabel1);
-        Console.WriteLine("Total Cost: $" + totalCost1);
+        Console.WriteLine("Total Price: $" + totalPrice1);
         Console.WriteLine();
+
+        Console.WriteLine("----------------------------------------------------------------------------");
 
         Console.WriteLine("Order 2:");
         Console.WriteLine(packingLabel2);
         Console.WriteLine(shippingLabel2);
-        Console.WriteLine("Total Cost: $" + totalCost2);
+        Console.WriteLine("Total Price: $" + totalPrice2);
     }
 }
